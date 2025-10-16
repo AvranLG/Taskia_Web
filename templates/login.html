@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Iniciar Sesión - TaskIA</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskIA - Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
-<body class="login-page">
-  <div class="login-container">
-    <h2>TaskIA</h2>
-    <form method="POST">
-      <input type="email" name="email" placeholder="Correo" required><br>
-      <input type="password" name="password" placeholder="Contraseña" required><br>
-      <button type="submit">Entrar</button>
-    </form>
-    {% if error %}
-      <p class="error">{{ error }}</p>
-    {% endif %}
-  </div>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <img src="{{ url_for('static', filename='img/Logo_solo_circulo.png') }}" alt="Logo" class="login-logo-circulo">
+            <img src="{{ url_for('static', filename='img/Logo_solo_letras.png') }}" alt="Logo" class="login-logo-letras">
+            <h1 class="login-title">Organiza tu día con inteligencia</h1>
+            <form method="POST" action="/login">
+                <input type="email" name="email" placeholder="Correo electrónico" class="login-input" required>
+                <input type="password" name="password" placeholder="Contraseña" class="login-input" required>
+                <button type="submit" class="login-button">Iniciar sesión</button>
+            </form>
+            <a href="/register" class="register-button">Registrarse</a>
+        </div>
+    </div>
 </body>
 </html>

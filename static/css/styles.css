@@ -1,45 +1,132 @@
+/* Colores oficiales TaskIA */
+:root {
+    --azul-oscuro: #0D1E4C;
+    --rosa-medio: #C48CB3;
+    --rosa-palo: #E5C9D7;
+    --azul-gris: #83A6CE;
+    --azul-petroleo: #26415E;
+    --azul-casi-negro: #0B1B32;
+    --login-card-width: 600px;  /* ancho personalizado */
+    --login-card-height: 200px;  /* altura personalizada, puede ser auto o un valor fijo */
+}
+
+/* Reset rápido */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #0D1E4C;
-  color: white;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--rosa-palo); /* TODO: Toda la pantalla rosa */
 }
 
 .login-container {
-  background-color: #26415E;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
-input {
-  width: 80%;
-  margin: 10px 0;
-  padding: 10px;
-  border: none;
-  border-radius: 6px;
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* centra horizontal */
+    align-items: center;     /* centra vertical */
+    background-color: var(--rosa-palo); /* toda la pantalla rosa */
+    margin: 0;
 }
 
-button {
-  background-color: #C48CB3;
-  border: none;
-  padding: 10px 20px;
-  color: white;
-  border-radius: 6px;
-  cursor: pointer;
+.login-card {
+    background-color: rgba(255, 255, 255, 0.2); /* semi-transparente */
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    height: auto;
+    /* quitar padding-top grande */
 }
 
-button:hover {
-  background-color: #E5C9D7;
-  color: #0B1B32;
+
+
+.login-logo-circulo {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+    border-radius: 50%;
+    margin: 0 0 5px 0; /* arriba 0, abajo 5px */
 }
 
-.error {
-  color: #ff6b6b;
-  margin-top: 10px;
+.login-logo-letras {
+    width: 290px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 50%;
+    margin: 0 0 20px 0; /* abajo 20px para separar del formulario */
 }
+
+
+.login-title {
+    color: var(--azul-casi-negro);
+    margin-bottom: 30px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.login-input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--azul-gris);
+    font-size: 16px;
+}
+
+.login-input:focus {
+    outline: none;
+    border-color: var(--rosa-medio);
+}
+
+.login-button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--azul-petroleo);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-button:hover {
+    background-color: var(--azul-oscuro);
+}
+
+.register-button {
+    display: block;         /* ocupa toda la línea */
+    width: 100%;            /* igual que login-button */
+    margin-top: 15px;       /* separación con el botón de login */
+    padding: 12px;          /* igual que login-button */
+    border-radius: 10px;    /* igual que login-button */
+    text-decoration: none;  /* quita subrayado de link */
+    background-color: var(--rosa-medio);
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.register-button:hover {
+    background-color: var(--rosa-medio);
+}
+
+
